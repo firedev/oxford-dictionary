@@ -9,7 +9,8 @@ module OxfordDictionary
       ENDPOINT = 'inflections'.freeze
 
       def inflection(query, params = {})
-        EntryResponse.new(request(ENDPOINT, query, params)['results'][0])
+        OxfordDictionary::ApiObjects::EntryResponse.
+          new(request(ENDPOINT, query, params)['results'][0])
       end
     end
   end

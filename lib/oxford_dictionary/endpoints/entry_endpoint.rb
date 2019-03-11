@@ -55,7 +55,8 @@ module OxfordDictionary
       private
 
       def entry_request(query, params)
-        EntryResponse.new(request(ENDPOINT, query, params)['results'][0])
+        OxfordDictionary::ApiObjects::EntryResponse.
+          new(request(ENDPOINT, query, params)['results'][0])
       end
     end
   end

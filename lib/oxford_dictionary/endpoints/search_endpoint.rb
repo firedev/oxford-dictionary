@@ -10,7 +10,8 @@ module OxfordDictionary
 
       def search(query, params = {})
         params[:q] = query
-        ListResponse.new(request(ENDPOINT, query, params))
+        OxfordDictionary::ApiObjects::ListResponse.
+          new(request(ENDPOINT, query, params))
       end
     end
   end

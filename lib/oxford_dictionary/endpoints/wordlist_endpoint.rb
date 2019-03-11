@@ -16,7 +16,8 @@ module OxfordDictionary
         if too_many_filter_values(params)
           raise(Error.new(400), 'Do not use more than 5 values for a filter')
         end
-        ListResponse.new(request(ENDPOINT, nil, params))
+        OxfordDictionary::ApiObjects::ListResponse.
+          new(request(ENDPOINT, nil, params))
       end
 
       private
