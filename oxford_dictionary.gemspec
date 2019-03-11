@@ -27,6 +27,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock', '~> 2.1.0'
   spec.add_development_dependency 'rubocop', '~> 0.45.0'
 
+  spec.add_runtime_dependency 'dry-struct', '0.6.0'
   spec.add_runtime_dependency 'virtus', '~> 1.0.5'
   spec.add_runtime_dependency 'plissken', '~> 0.1.0'
 end
