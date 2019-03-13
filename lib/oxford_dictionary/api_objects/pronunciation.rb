@@ -1,14 +1,13 @@
-require 'virtus'
+require 'oxford_dictionary/api_objects/entity'
 
 # Pronunciation
 module OxfordDictionary
   module ApiObjects
-    class Pronunciation
-      include Virtus.model
-      attribute :audio_file, String
-      attribute :dialects, Array[String]
-      attribute :phonetic_notation, String
-      attribute :phonetic_spelling, String
+    class Pronunciation < Entity
+      attribute :audio_file, Types::Strict::String
+      attribute :dialects, Types::Strict::Array.of(String)
+      attribute :phonetic_notation, Types::Strict::String
+      attribute :phonetic_spelling, Types::Strict::String
     end
   end
 end
